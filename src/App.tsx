@@ -2,7 +2,7 @@ import React from "react";
 
 import { IconType } from "react-icons";
 import { BsMoonStarsFill, BsSunFill } from 'react-icons/bs';
-import { FaSquareGithub, FaSquareLinkedIn, FaSquarePen } from 'react-icons/fa6';
+import { FaSquareGithub, FaLinkedin, FaSquarePen } from 'react-icons/fa6';
 
 import resume from "../src/assets/documents/JigarPatel.pdf";
 
@@ -78,7 +78,7 @@ function App() {
 
       <div className="mx-auto flex w-min pt-3">
         <div>
-          <LinkButton href="https://www.linkedin.com/in/8jigarpatel/" text="LinkedIn" icon={FaSquareLinkedIn} />
+          <LinkButton href="https://www.linkedin.com/in/8jigarpatel/" text="LinkedIn" icon={FaLinkedin} />
         </div>
         <div>
           <LinkButton href="https://github.com/8jigarpatel" text="GitHub" icon={FaSquareGithub} />
