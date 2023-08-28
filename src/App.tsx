@@ -78,13 +78,13 @@ function App() {
         </div>
 
         <div className="mx-auto flex w-min flex-col gap-2 pt-3 md:flex-row">
-          <div className="w-56 flex-initial text-blue-600 dark:text-blue-400">
+          <div className="w-80 flex-initial text-blue-600 dark:text-blue-400 md:w-56">
             <LinkButton href="https://www.linkedin.com/in/8jigarpatel/" text="LinkedIn" icon={FaLinkedin} />
           </div>
-          <div className="w-56 flex-initial text-purple-500 dark:text-purple-400">
+          <div className="w-80 flex-initial text-purple-500 dark:text-purple-400 md:w-56">
             <LinkButton href="https://github.com/8jigarpatel" text="GitHub" icon={FaSquareGithub} />
           </div>
-          <div className="w-56 flex-initial text-teal-700 dark:text-teal-400">
+          <div className="w-80 flex-initial text-teal-700 dark:text-teal-400 md:w-56">
             <LinkButton href="https://8jigarpatel.hashnode.dev/" text="Blog" icon={FaSquarePen} />
           </div>
         </div>
