@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.tsx"],
-  darkMode: "class",
+  content: ['./index.html', './src/**/*.tsx'],
+  darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        tahoma: ['Tahoma'],
+        trebuchet: ["'Trebuchet MS'"],
+      },
+    },
   },
   plugins: [],
 };

@@ -66,8 +66,8 @@ function App() {
           </div>
         </nav>
 
-        <div className="mx-auto mt-10 flex flex-col py-3 text-left md:mt-14">
-          <div className="text-5xl font-bold text-blue-900 dark:text-orange-400 md:text-6xl">
+        <div className="mx-auto mt-8 flex flex-col py-3 text-left md:mt-12">
+          <div className="font-tahoma text-5xl font-bold text-blue-900 dark:text-orange-400 md:text-6xl">
             Jigar Patel
           </div>
           <div className="pt-3 font-mono text-xl text-green-900 dark:text-yellow-300 md:pt-6 md:text-2xl">
