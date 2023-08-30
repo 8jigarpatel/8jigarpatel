@@ -55,12 +55,12 @@ function App() {
       <div className="mx-auto w-min">
 
         <nav className="flex justify-between">
-          <a className='flex items-center gap-1 font-mono text-sm text-slate-300 dark:text-slate-700' href="https://github.com/8jigarpatel/jigarpatel" target="new">
+          <a className='flex items-center gap-1 font-mono text-sm text-slate-300 hover:underline dark:text-slate-700' href="https://github.com/8jigarpatel/jigarpatel" target="new">
             fork on GitHub <FaCodeFork />
           </a>
           <div className='text-lg'>
             <button onClick={toggleTheme} className="select-none">
-              <div className={`absolute transition-all ${theme === 'dark' ? 'rotate-45 opacity-0' : ''}`}><BsMoonStarsFill /></div>
+              <div className={`absolute text-gray-700 transition-all ${theme === 'dark' ? 'rotate-45 opacity-0' : ''}`}><BsMoonStarsFill /></div>
               <div className={`transition-all ${theme === 'dark' ? '' : 'rotate-45 opacity-0'}`}><BsSunFill /></div>
             </button>
           </div>
@@ -73,19 +73,21 @@ function App() {
           <div className="pt-3 font-mono text-xl text-green-900 dark:text-yellow-300 md:pt-6 md:text-2xl">
             Full-Stack Developer
           </div>
-          <a target="new" href={resume} className="pt-3 text-lg text-blue-800 underline dark:text-blue-300">
-            View my resume ↗
-          </a>
+          <div className="pt-3 ">
+            <a target="new" href={resume} className="text-lg text-blue-800 hover:underline dark:text-blue-300">
+              View my resume ↗
+            </a>
+          </div>
         </div>
 
         <div className="mx-auto flex w-min flex-col gap-2 pt-3 md:flex-row">
-          <div className="w-80 flex-initial text-blue-600 dark:text-blue-400 md:w-56">
+          <div className="w-80 flex-initial text-blue-600 dark:text-blue-400 md:w-64">
             <LinkButton href="https://www.linkedin.com/in/8jigarpatel/" text="LinkedIn" icon={FaLinkedin} />
           </div>
-          <div className="w-80 flex-initial text-purple-500 dark:text-purple-400 md:w-56">
+          <div className="w-80 flex-initial text-purple-500 dark:text-purple-400 md:w-64">
             <LinkButton href="https://github.com/8jigarpatel" text="GitHub" icon={FaSquareGithub} />
           </div>
-          <div className="w-80 flex-initial text-teal-700 dark:text-teal-400 md:w-56">
+          <div className="w-80 flex-initial text-teal-700 dark:text-teal-400 md:w-64">
             <LinkButton href="https://8jigarpatel.hashnode.dev/" text="Blog" icon={FaSquarePen} />
           </div>
         </div>
@@ -95,7 +97,7 @@ function App() {
           Professional skills
         </div>
         <div className="mt-2 flex flex-col gap-2 text-lg md:flex-row">
-          <div className="w-80 rounded-md bg-teal-50 dark:bg-teal-800 md:w-56">
+          <div className="w-80 rounded-md bg-teal-50 dark:bg-teal-800 md:w-64">
             <p className="rounded-t bg-teal-100 p-1 px-3 font-semibold dark:bg-teal-900 md:p-2">Backend</p>
             <ul className="p-1 px-3 md:p-2">
               <li className="flex items-center gap-2"><SiDotnet className="text-yellow-500" /> C# .NET Core</li>
@@ -103,7 +105,7 @@ function App() {
               <li className="flex items-center gap-2"><SiOpenapiinitiative className="text-green-600" />Open API</li>
             </ul>
           </div>
-          <div className="w-80 rounded-md bg-emerald-50 dark:bg-emerald-800 md:w-56">
+          <div className="w-80 rounded-md bg-emerald-50 dark:bg-emerald-800 md:w-64">
             <p className="rounded-t bg-emerald-100 p-1 px-3 font-semibold dark:bg-emerald-900 md:p-2">Frontend</p>
             <ul className="p-1 px-3 md:p-2">
               <li className="flex items-center gap-2"><FaAngular className="text-red-500" /> Angular</li>
@@ -112,7 +114,7 @@ function App() {
               <li className="flex items-center gap-2"><SiJavascript className="text-yellow-600" /> JavaScript</li>
             </ul>
           </div>
-          <div className="w-80 rounded-md bg-cyan-50 dark:bg-cyan-800 md:w-56">
+          <div className="w-80 rounded-md bg-cyan-50 dark:bg-cyan-800 md:w-64">
             <p className="rounded-t bg-cyan-100 p-1 px-3 font-semibold dark:bg-cyan-900 md:p-2">Others</p>
             <ul className="p-1 px-3 md:p-2">
               <li className="flex items-center gap-2"><FaGitAlt className="text-red-400" /> Git</li>
@@ -136,7 +138,7 @@ function App() {
               <p className="flex-1 rounded-t p-1 px-3 font-semibold md:p-2">Microsoft Certified: Azure Developer Associate</p>
             </div>
             <div className="">
-              <a target="new" href="https://www.credly.com/badges/498988bf-b34d-42df-8996-f5c4d978eb2c" className="pt-3 text-blue-800 underline dark:text-blue-300">
+              <a target="new" href="https://www.credly.com/badges/498988bf-b34d-42df-8996-f5c4d978eb2c" className="pt-3 text-blue-800 hover:underline dark:text-blue-300">
                 Show credential ↗
               </a>              
             </div>
@@ -148,7 +150,7 @@ function App() {
               <p className="flex-1 rounded-t p-1 px-3 font-semibold md:p-2">MCSA: Web Applications</p>
             </div>
             <div className="">
-              <a target="new" href="https://www.credly.com/badges/cab84dfb-6a80-4527-b160-b4d43aa2ff60" className="pt-3 text-blue-800 underline dark:text-blue-300">
+              <a target="new" href="https://www.credly.com/badges/cab84dfb-6a80-4527-b160-b4d43aa2ff60" className="pt-3 text-blue-800 hover:underline dark:text-blue-300">
                 Show credential ↗
               </a>              
             </div>
@@ -160,7 +162,7 @@ function App() {
               <p className="flex-1 rounded-t p-1 px-3 font-semibold md:p-2">MCSD: App Builder</p>
             </div>
             <div className="">
-              <a target="new" href="https://www.credly.com/badges/de0d8a97-8676-4693-a6ac-c10f79b009b3" className="pt-3 text-blue-800 underline dark:text-blue-300">
+              <a target="new" href="https://www.credly.com/badges/de0d8a97-8676-4693-a6ac-c10f79b009b3" className="pt-3 text-blue-800 hover:underline dark:text-blue-300">
                 Show credential ↗
               </a>              
             </div>
