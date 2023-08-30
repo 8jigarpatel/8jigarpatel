@@ -3,7 +3,7 @@ import React from "react";
 import { IconType } from "react-icons";
 import { BsMoonStarsFill, BsSunFill } from 'react-icons/bs';
 import { FaAngular, FaCodeFork, FaDocker, FaGitAlt, FaLinkedin, FaReact, FaSquareGithub, FaSquarePen } from 'react-icons/fa6';
-import { SiDotnet, SiExpress, SiTailwindcss } from 'react-icons/si';
+import { SiDotnet, SiExpress, SiJavascript, SiMicrosoft, SiOpenapiinitiative, SiPostgresql, SiTailwindcss, SiTypescript } from 'react-icons/si';
 
 import resume from "../src/assets/documents/JigarPatel.pdf";
 
@@ -29,7 +29,7 @@ function App() {
   const [theme, setTheme] = React.useState('');
 
   React.useEffect(() => {
-    if (localStorage.getItem('theme') === 'dark') {
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       setTheme('dark');
       document.documentElement.classList.add('dark');
     } else {
@@ -39,12 +39,12 @@ function App() {
   }, []);
   
  const toggleTheme = () => {
-    if (localStorage.getItem('theme') === 'dark') {
-      localStorage.setItem('theme', 'light');
+    if (localStorage.theme === 'dark') {
+      localStorage.theme = 'light';
       setTheme('light');
       document.documentElement.classList.remove('dark');
     } else {
-      localStorage.setItem('theme', 'dark');
+      localStorage.theme = 'dark';
       setTheme('dark');
       document.documentElement.classList.add('dark');
     }
@@ -74,7 +74,7 @@ function App() {
             Full-Stack Developer
           </div>
           <a target="new" href={resume} className="pt-3 text-lg text-blue-800 underline dark:text-blue-300">
-            view my resume ↗
+            View my resume ↗
           </a>
         </div>
 
@@ -90,12 +90,17 @@ function App() {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col gap-2 font-mono text-lg text-gray-600 dark:text-gray-300 md:mt-16 md:flex-row">
+      <div className="mt-8 font-mono text-gray-600 dark:text-gray-300 md:mt-10">
+        <div className="text-xl font-semibold">
+          Professional skills
+        </div>
+        <div className="mt-2 flex flex-col gap-2 text-lg md:flex-row">
           <div className="w-80 rounded-md bg-teal-50 dark:bg-teal-800 md:w-56">
             <p className="rounded-t bg-teal-100 p-1 px-3 font-semibold dark:bg-teal-900 md:p-2">Backend</p>
             <ul className="p-1 px-3 md:p-2">
               <li className="flex items-center gap-2"><SiDotnet className="text-yellow-500" /> C# .NET Core</li>
               <li className="flex items-center gap-2"><SiExpress className="text-green-600" />Express (Node JS)</li>
+              <li className="flex items-center gap-2"><SiOpenapiinitiative className="text-green-600" />Open API</li>
             </ul>
           </div>
           <div className="w-80 rounded-md bg-emerald-50 dark:bg-emerald-800 md:w-56">
@@ -103,17 +108,66 @@ function App() {
             <ul className="p-1 px-3 md:p-2">
               <li className="flex items-center gap-2"><FaAngular className="text-red-500" /> Angular</li>
               <li className="flex items-center gap-2"><FaReact className="text-blue-500" /> React</li>
-              <li className="flex items-center gap-2"><SiTailwindcss className="text-sky-600" /> Tailwind</li>
+              <li className="flex items-center gap-2"><SiTailwindcss className="text-sky-600" /> Tailwind CSS</li>
+              <li className="flex items-center gap-2"><SiJavascript className="text-yellow-600" /> JavaScript</li>
             </ul>
           </div>
           <div className="w-80 rounded-md bg-cyan-50 dark:bg-cyan-800 md:w-56">
             <p className="rounded-t bg-cyan-100 p-1 px-3 font-semibold dark:bg-cyan-900 md:p-2">Others</p>
             <ul className="p-1 px-3 md:p-2">
-              <li className="flex items-center gap-2"><FaDocker className="text-blue-400" />Docker</li>
               <li className="flex items-center gap-2"><FaGitAlt className="text-red-400" /> Git</li>
+              <li className="flex items-center gap-2"><FaDocker className="text-blue-400" />Docker</li>
+              <li className="flex items-center gap-2"><SiPostgresql className="" /> SQL / PostgreSQL</li>
+              <li className="flex items-center gap-2"><SiTypescript className="text-blue-400" /> TypeScript</li>
             </ul>
           </div>
         </div>
+      </div>
+
+      <div className="mt-8 text-gray-600 dark:text-gray-300 md:mt-10">
+        <div className="text-xl font-semibold">
+          Licenses & certifications
+        </div>
+        <div className="mt-2 flex flex-col gap-2 rounded-md border border-slate-200 p-2 dark:border-slate-700">
+
+          <div className="flex min-w-full flex-col p-2 md:flex-row md:items-center">
+            <div className="flex items-center md:flex-1">
+              <SiMicrosoft className="" />
+              <p className="flex-1 rounded-t p-1 px-3 font-semibold md:p-2">Microsoft Certified: Azure Developer Associate</p>
+            </div>
+            <div className="">
+              <a target="new" href="https://www.credly.com/badges/498988bf-b34d-42df-8996-f5c4d978eb2c" className="pt-3 text-blue-800 underline dark:text-blue-300">
+                Show credential ↗
+              </a>              
+            </div>
+          </div>
+
+          <div className="flex min-w-full flex-col border-t border-slate-200 p-2 dark:border-slate-700 md:flex-row md:items-center">
+            <div className="flex items-center md:flex-1">
+              <SiMicrosoft className="" />
+              <p className="flex-1 rounded-t p-1 px-3 font-semibold md:p-2">MCSA: Web Applications</p>
+            </div>
+            <div className="">
+              <a target="new" href="https://www.credly.com/badges/cab84dfb-6a80-4527-b160-b4d43aa2ff60" className="pt-3 text-blue-800 underline dark:text-blue-300">
+                Show credential ↗
+              </a>              
+            </div>
+          </div>
+
+          <div className="flex min-w-full flex-col border-t border-slate-200 p-2 dark:border-slate-700 md:flex-row md:items-center">
+            <div className="flex items-center md:flex-1">
+              <SiMicrosoft className="" />
+              <p className="flex-1 rounded-t p-1 px-3 font-semibold md:p-2">MCSD: App Builder</p>
+            </div>
+            <div className="">
+              <a target="new" href="https://www.credly.com/badges/de0d8a97-8676-4693-a6ac-c10f79b009b3" className="pt-3 text-blue-800 underline dark:text-blue-300">
+                Show credential ↗
+              </a>              
+            </div>
+          </div>
+
+        </div>
+      </div>
 
       </div>
     </div>
