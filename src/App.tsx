@@ -51,7 +51,7 @@ function App() {
   };
 
   return (
-    <div className="h-full min-h-screen w-screen p-5 text-black transition-all dark:bg-slate-800 dark:text-white md:p-10">
+    <div className="h-full min-h-screen w-screen p-5 text-black transition-all dark:bg-slate-800 dark:text-white">
       <div className="mx-auto w-min">
 
         <nav className="flex justify-between">
@@ -67,7 +67,7 @@ function App() {
         </nav>
 
         <div className="mx-auto mt-8 flex flex-col py-3 text-left md:mt-12">
-          <div className="font-tahoma text-5xl font-bold text-blue-900 dark:text-orange-400 md:text-6xl">
+          <div className="font-nunito text-5xl font-bold text-blue-900 dark:text-orange-400 md:text-6xl">
             Jigar Patel
           </div>
           <div className="pt-3 font-mono text-xl text-green-900 dark:text-yellow-300 md:pt-6 md:text-2xl">
@@ -81,13 +81,13 @@ function App() {
         </div>
 
         <div className="mx-auto flex w-min flex-col gap-2 pt-3 md:flex-row">
-          <div className="w-80 flex-initial text-blue-600 dark:text-blue-400 md:w-64">
+          <div className="w-80 flex-initial text-blue-600 dark:text-blue-400 md:w-60">
             <LinkButton href="https://www.linkedin.com/in/8jigarpatel/" text="LinkedIn" icon={FaLinkedin} />
           </div>
-          <div className="w-80 flex-initial text-purple-500 dark:text-purple-400 md:w-64">
+          <div className="w-80 flex-initial text-purple-500 dark:text-purple-400 md:w-60">
             <LinkButton href="https://github.com/8jigarpatel" text="GitHub" icon={FaSquareGithub} />
           </div>
-          <div className="w-80 flex-initial text-teal-700 dark:text-teal-400 md:w-64">
+          <div className="w-80 flex-initial text-teal-700 dark:text-teal-400 md:w-60">
             <LinkButton href="https://8jigarpatel.hashnode.dev/" text="Blog" icon={FaSquarePen} />
           </div>
         </div>
@@ -97,7 +97,7 @@ function App() {
           Professional skills
         </div>
         <div className="mt-2 flex flex-col gap-2 text-lg md:flex-row">
-          <div className="w-80 rounded-md bg-teal-50 dark:bg-teal-800 md:w-64">
+          <div className="w-80 rounded-md bg-teal-50 dark:bg-teal-800 md:w-60">
             <p className="rounded-t bg-teal-100 p-1 px-3 font-semibold dark:bg-teal-900 md:p-2">Backend</p>
             <ul className="p-1 px-3 md:p-2">
               <li className="flex items-center gap-2"><SiDotnet className="text-yellow-500" /> C# .NET Core</li>
@@ -105,7 +105,7 @@ function App() {
               <li className="flex items-center gap-2"><SiOpenapiinitiative className="text-green-600" />Open API</li>
             </ul>
           </div>
-          <div className="w-80 rounded-md bg-emerald-50 dark:bg-emerald-800 md:w-64">
+          <div className="w-80 rounded-md bg-emerald-50 dark:bg-emerald-800 md:w-60">
             <p className="rounded-t bg-emerald-100 p-1 px-3 font-semibold dark:bg-emerald-900 md:p-2">Frontend</p>
             <ul className="p-1 px-3 md:p-2">
               <li className="flex items-center gap-2"><FaAngular className="text-red-500" /> Angular</li>
@@ -114,7 +114,7 @@ function App() {
               <li className="flex items-center gap-2"><SiJavascript className="text-yellow-600" /> JavaScript</li>
             </ul>
           </div>
-          <div className="w-80 rounded-md bg-cyan-50 dark:bg-cyan-800 md:w-64">
+          <div className="w-80 rounded-md bg-cyan-50 dark:bg-cyan-800 md:w-60">
             <p className="rounded-t bg-cyan-100 p-1 px-3 font-semibold dark:bg-cyan-900 md:p-2">Others</p>
             <ul className="p-1 px-3 md:p-2">
               <li className="flex items-center gap-2"><FaGitAlt className="text-red-400" /> Git</li>

@@ -7,6 +7,7 @@ export default {
       fontFamily: {
         tahoma: ['Tahoma'],
         trebuchet: ["'Trebuchet MS'"],
+        nunito: ['rajdhani', 'sans-serif'],
       },
     },
   },
