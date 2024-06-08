@@ -3,7 +3,7 @@ import React from "react";
 import { IconType } from "react-icons";
 import { BsMoonStarsFill, BsSunFill } from 'react-icons/bs';
 import { FaAngular, FaCodeFork, FaDocker, FaGitAlt, FaLinkedin, FaReact, FaSquareGithub, FaSquarePen } from 'react-icons/fa6';
-import { SiDotnet, SiExpress, SiJavascript, SiMicrosoft, SiOpenapiinitiative, SiPostgresql, SiTailwindcss, SiTypescript } from 'react-icons/si';
+import { SiDotnet, SiExpress, SiJavascript, SiMicrosoft, SiOpenapiinitiative, SiPostgresql, SiTailwindcss, SiTypescript, SiDatabricks } from 'react-icons/si';
 
 import resume from "../src/assets/documents/JigarPatel.pdf";
 
@@ -168,6 +168,18 @@ function App() {
             </div>
           </div>
 
+          <div className="flex min-w-full flex-col border-t border-slate-200 p-2 dark:border-slate-700 md:flex-row md:items-center">
+            <div className="flex items-center md:flex-1">
+              <SiDatabricks className="" />
+              <p className="flex-1 rounded-t p-1 px-3 font-semibold md:p-2">Generative AI Fundamentals</p>
+            </div>
+            <div className="">
+              <a target="new" href="https://credentials.databricks.com/9368acb7-d94b-42a1-b401-961196861b4a" className="pt-3 text-blue-800 hover:underline dark:text-blue-300">
+                Show credential ↗
+              </a>              
+            </div>
+          </div>
+          
         </div>
       </div>
 
